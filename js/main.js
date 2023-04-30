@@ -157,6 +157,32 @@ class Carusel {
   }
 }
 
-const carusel = new Carusel(document.querySelector('.slider'))
+const carusel = new Carusel(document.querySelector('.section__hero_carusel'))
+
+var dots = document.querySelectorAll('.slider__list .slider__list__item');
+dots.forEach(function(dot) {
+    // document.querySelector('.slider1').style.width = 'calc(30em *' + dots.length + ')';
+    // document.querySelector('.slider1').style.height = 'calc(10em *' + dots.length + ')';
+});
+
 
  // end carusel
+
+ // start slider
+
+ const slidesContainer = document.querySelector(".section__hero_slider");
+ const slide = document.querySelector(".section__hero_slide");
+ const prevButton = document.querySelector(".button__back");
+ const nextButton = document.querySelector(".button__go");
+ 
+ nextButton.addEventListener("click", () => {
+   const slideWidth = slide.clientWidth;
+   slidesContainer.scrollLeft += slideWidth;
+ });
+ 
+ prevButton.addEventListener("click", () => {
+   const slideWidth = slide.clientWidth;
+   slidesContainer.scrollLeft -= slideWidth;
+ });
+
+ // end slider

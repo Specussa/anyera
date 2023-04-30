@@ -606,29 +606,62 @@ button, button:focus, button:hover, button:active {
 /* end havbar */
 
 /* start hero */
+.slider-wrapper {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
 
-.header__hero {
+.slide-arrow {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 4rem;
+  background-color: white;
+  border: none;
+  width: 2rem;
+  font-size: 3rem;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 100ms;
+}
+
+.slide-arrow:hover,
+.slide-arrow:focus {
+  opacity: 1;
+}
+
+.section__hero {
   position: relative;
   background: #252424;
   overflow: hidden;
 }
 
-.header__hero_slider {
+.section__hero_slider {
   display: flex;
+  width: 100%;
   padding: 265px 0 264px;
-  flex-direction: column;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  list-style: none;
 }
 
-.header__hero_slide {
+.section__hero_slide {
   display: flex;
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
   gap: 57px;
 }
 
-.header__hero_slide:nth-child(2) .header__hero_left {
+.section__hero_slide:nth-child(2) .section__hero_left {
   gap: 34px;
 }
 
-.header__hero_left {
+.section__hero_left {
   display: flex;
   width: 50%;
   max-width: 618px;
@@ -638,7 +671,7 @@ button, button:focus, button:hover, button:active {
   gap: 50px;
 }
 
-.header__hero_right {
+.section__hero_right {
   display: flex;
   width: 50%;
   max-width: 564px;
@@ -646,7 +679,7 @@ button, button:focus, button:hover, button:active {
   justify-content: center;
 }
 
-.header__hero_left_head {
+.section__hero_left_head {
   font-family: 'Montserrat', sans-serif;
   font-size: 48px;
   font-weight: 400;
@@ -654,7 +687,7 @@ button, button:focus, button:hover, button:active {
   color: #FFE9F6;
 }
 
-.header__hero_left_desc {
+.section__hero_left_desc {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -662,7 +695,7 @@ button, button:focus, button:hover, button:active {
   color: #FFE9F6;
 }
 
-.header__top {
+.section__hero_top {
   display: block;
   height: 222px;
   position: absolute;
@@ -673,7 +706,7 @@ button, button:focus, button:hover, button:active {
   background-position: 0px 0px;
 }
 
-.header__bottom {
+.section__hero_bottom {
   display: block;
   height: 270px;
   position: absolute;
@@ -685,6 +718,96 @@ button, button:focus, button:hover, button:active {
 }
 
 /* end hero */
+
+/* start carusel */
+
+.section__hero_carusel {
+  position: relative;
+  --radius-x: 30em;
+  --radius-y: 15em;
+}
+
+.section__hero_carusel_list {
+  display: flex;
+  width: 523px;
+  height: 494px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  list-style: none;
+  background: url('../img/icons/caruselback.svg') no-repeat;
+  background-size: 523px 494px;
+  overflow: hidden;
+}
+
+.section__hero_carusel_item {
+  position: absolute;
+  transition: transform 0.5s;
+  transform: 
+    translateX(calc(var(--cos) * var(--radius-x)))
+    translateY(calc(var(--sin) * var(--radius-y)))
+    scale(calc(var(--scale) * 1));
+}
+
+.section__hero_carusel_item img {
+  width: 384px;
+  height: auto;
+}
+
+.section__hero_carusel_item:nth-child(1), .section__hero_carusel_item:nth-child(1) img {
+  width: 384px;
+  height: 384px;
+}
+
+.section__hero_carusel_item:nth-child(2), .section__hero_carusel_item:nth-child(2) img {
+  width: 540px;
+  height: 406px;
+}
+
+.section__hero_carusel_item:nth-child(3), .section__hero_carusel_item:nth-child(3) img {
+  width: 410px;
+  height: 376px;
+}
+
+.section__hero_carusel_button {
+  padding: 10px 17.18px;
+  position: absolute;
+  z-index: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.section__hero_carusel_button_prev {
+  left: 0;
+  bottom: 0;
+}
+
+.section__hero_carusel_button_next {
+  left: 98.36px;
+  bottom: 0;
+}
+
+.section__hero_carusel_button_prev::after {
+  content: '';
+  display: inline-block;
+  width: 29.64px;
+  height: 48px;
+  background: url('../img/icons/left.svg') no-repeat;
+  background-size: 29.64px 48px;
+}
+
+.section__hero_carusel_button_next::after {
+  content: '';
+  display: inline-block;
+  width: 29.64px;
+  height: 48px;
+  background: url('../img/icons/right.svg') no-repeat;
+  background-size: 29.64px 48px;
+}
+
+/* end carusel */
 
 /* start tobe */
 
@@ -775,97 +898,3 @@ button, button:focus, button:hover, button:active {
 }
 
 /* end tobe */
-
-/* start carusel */
-
-.slider1 {
-  font-size: calc(100vw / 106);
-  --radius-x: 30em;
-  --radius-y: 15em;
-}
-
-.slider {
-  position: relative;
-}
-
-.slider__list {
-  display: flex;
-  width: 523px;
-  height: 494px;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  list-style: none;
-  background: url('../img/icons/caruselback.svg') no-repeat;
-  background-size: 523px 494px;
-  overflow: hidden;
-}
-
-.slider__list__item {
-  position: absolute;
-  transition: transform 0.5s;
-  transform: 
-    translateX(calc(var(--cos) * var(--radius-x)))
-    translateY(calc(var(--sin) * var(--radius-y)))
-    scale(calc(var(--scale) * 1));
-}
-
-.slider__list__item img {
-  width: 384px;
-  height: auto;
-}
-
-.slider__list__item:nth-child(1), .slider__list__item:nth-child(1) img {
-  width: 384px;
-  height: 384px;
-}
-
-.slider__list__item:nth-child(2), .slider__list__item:nth-child(2) img {
-  width: 540px;
-  height: 406px;
-}
-
-.slider__list__item:nth-child(3), .slider__list__item:nth-child(3) img {
-  width: 410px;
-  height: 376px;
-}
-
-.slider__list__step-button {
-  padding: 10px 17.18px;
-  position: absolute;
-  z-index: 1;
-  background: transparent;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-.slider__list__step-button_prev {
-  left: 0;
-  bottom: 0;
-}
-
-.slider__list__step-button_next {
-  left: 98.36px;
-  bottom: 0;
-}
-
-.slider__list__step-button_prev::after {
-  content: '';
-  display: inline-block;
-  width: 29.64px;
-  height: 48px;
-  background: url('../img/icons/left.svg') no-repeat;
-  background-size: 29.64px 48px;
-}
-
-.slider__list__step-button_next::after {
-  content: '';
-  display: inline-block;
-  width: 29.64px;
-  height: 48px;
-  background: url('../img/icons/right.svg') no-repeat;
-  background-size: 29.64px 48px;
-}
-
-/* end carusel */
