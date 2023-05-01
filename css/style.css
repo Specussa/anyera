@@ -210,7 +210,7 @@ button, button:focus, button:hover, button:active {
   border-radius: 30px;
 }
 
-.section__hero_sp_button {
+.section__hero_sp_button, .section__hero_sp_button:focus {
   height: 38px;
   width: 136px;
   padding: 8px 10px 8px 10px;
