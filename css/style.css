@@ -163,16 +163,15 @@ button, button:focus, button:hover, button:active {
   height: 60px;
   width: 300px;
   position: relative;
+  color: #fff;
+  background: #252424;
   border-radius: 30px;
-  background: transparent;
-  background-image: #252424;
   -webkit-transition: border 0.3s linear;
   -moz-transition: border 0.3s linear;
   -ms-transition: border 0.3s linear;
   -o-transition: border 0.3s linear;
   transition: border 0.3s linear;
   z-index: 2;
-  color: #fff;
 }
 
 .button__back::before {
@@ -211,16 +210,38 @@ button, button:focus, button:hover, button:active {
   border-radius: 30px;
 }
 
-.button__level_one {
-  
+.section__hero_sp_button {
+  height: 38px;
+  width: 136px;
+  padding: 8px 10px 8px 10px;
+  border-radius: 20px;
+  background-color: #252424;
+  color: #fff;
+  border: 1px solid #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -ms-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
 }
 
-.button__level_two {
-  
+.section__hero_sp_button:hover.button__level_one {
+  background-color: #7A0BC0;
+  border: 1px solid #fff;
 }
 
-.button__level_three {
-  
+.section__hero_sp_button:hover.button__level_two {
+  background-color: #0B8AC0;
+  border: 1px solid #fff;
+}
+
+.section__hero_sp_button:hover.button__level_three {
+  background-color: #E105E5;
+  border: 1px solid #fff;
 }
 
 /* end buttons */
@@ -382,7 +403,7 @@ button, button:focus, button:hover, button:active {
   cursor: pointer;
   position: absolute;
   top: 50px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header__nav_burger {
@@ -687,6 +708,7 @@ button, button:focus, button:hover, button:active {
   background: url('../img/top.svg') repeat no-repeat;
   background-position: 0px 0px;
   transition: left 0.7s;
+  z-index: 1;
 }
 
 .section__hero_bottom {
@@ -699,6 +721,88 @@ button, button:focus, button:hover, button:active {
   background: url('../img/bottom.svg') repeat no-repeat;
   background-position: 0px 0px;
   transition: left 0.7s;
+  z-index: 1;
+}
+
+.section__hero_sp_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.section__hero_sp_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 57px;
+}
+
+.section__hero_sp_block {
+  width: 371px;
+  height: 371px;
+  position: relative;
+  z-index: 1;
+}
+
+.section__hero_sp_back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 460px;
+  height: 466px;
+  background: url('../img/sp/spback.svg') no-repeat;
+  background-size: 460px;
+}
+
+.section__hero_sp_scale {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 344.7px;
+  width: 344.7px;
+  background: url('../img/sp/spscale.svg') no-repeat;
+  background-size: 344.7px;
+}
+
+.section__hero_sp_grdient_one {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section__hero_sp_grdient_two {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section__hero_sp_grdient_three {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section__hero_sp_arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(47deg);
+  height: 371px;
+  width: 371px;
+  background: url('../img/sp/sparrow.svg') no-repeat;
+  background-size: 371px;
+}
+
+.section__hero_sp_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* end hero */
