@@ -724,6 +724,10 @@ button, button:focus, button:hover, button:active {
   z-index: 1;
 }
 
+/* end hero */
+
+/* start sp */
+
 .section__hero_sp_buttons {
   display: flex;
   flex-direction: column;
@@ -766,25 +770,99 @@ button, button:focus, button:hover, button:active {
   background-size: 344.7px;
 }
 
-.section__hero_sp_grdient_one {
+.section__hero_sp_gradient {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.section__hero_sp_grdient_two {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.gradient_one svg path:nth-child(1) {
+  fill: #7A0BC0;
+}
+.gradient_one svg path:nth-child(2) {
+  fill: #7A0BC0;
+}
+.gradient_one svg path:nth-child(3) {
+  fill: #7A0BC0;
+}
+.gradient_one svg path:nth-child(4) {
+  fill: #fff;
+}
+.gradient_one svg path:nth-child(5) {
+  fill: #fff;
+}
+.gradient_one svg path:nth-child(6) {
+  fill: #fff;
+}
+.gradient_one svg path:nth-child(7) {
+  fill: #fff;
+}
+.gradient_one svg path:nth-child(8) {
+  fill: #fff;
+}
+.gradient_one svg path:nth-child(9) {
+  fill: #fff;
 }
 
-.section__hero_sp_grdient_three {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.gradient_two svg path:nth-child(1) {
+  fill: #0B8AC0;
+}
+.gradient_two svg path:nth-child(2) {
+  fill: #0B8AC0;
+}
+.gradient_two svg path:nth-child(3) {
+  fill: #0B8AC0;
+}
+.gradient_two svg path:nth-child(4) {
+  fill: #fff;
+}
+.gradient_two svg path:nth-child(5) {
+  fill: #fff;
+}
+.gradient_two svg path:nth-child(6) {
+  fill: #fff;
+}
+.gradient_two svg path:nth-child(7) {
+  fill: #0B8AC0;
+}
+.gradient_two svg path:nth-child(8) {
+  fill: #0B8AC0;
+}
+.gradient_two svg path:nth-child(9) {
+  fill: #0B8AC0;
+}
+
+.gradient_three svg path:nth-child(1) {
+  fill: #E105E6;
+}
+.gradient_three svg path:nth-child(2) {
+  fill: #E105E6;
+}
+.gradient_three svg path:nth-child(3) {
+  fill: #E105E6;
+}
+.gradient_three svg path:nth-child(4) {
+  fill: #E105E5;
+}
+.gradient_three svg path:nth-child(5) {
+  fill: #E105E5;
+}
+.gradient_three svg path:nth-child(6) {
+  fill: #E105E5;
+}
+.gradient_three svg path:nth-child(7) {
+  fill: #E105E5;
+}
+.gradient_three svg path:nth-child(8) {
+  fill: #E105E5;
+}
+.gradient_three svg path:nth-child(9) {
+  fill: #E105E5;
+}
+
+.gradient_one svg path, .gradient_two svg path, .gradient_three svg path {
+  transition: fill 0.7s;
 }
 
 .section__hero_sp_arrow {
@@ -796,6 +874,7 @@ button, button:focus, button:hover, button:active {
   width: 371px;
   background: url('../img/sp/sparrow.svg') no-repeat;
   background-size: 371px;
+  transition: transform 0.5s;
 }
 
 .section__hero_sp_center {
@@ -805,7 +884,7 @@ button, button:focus, button:hover, button:active {
   transform: translate(-50%, -50%);
 }
 
-/* end hero */
+/* end sp */
 
 /* start carusel */
 
@@ -918,7 +997,7 @@ button, button:focus, button:hover, button:active {
   width: 80px;
 }
 
-.loader {
+.tobe__loader {
   position: absolute;
   top: 50%;
   left: calc(50% + 20px);
@@ -929,7 +1008,7 @@ button, button:focus, button:hover, button:active {
   transform: translate(-50%, -50%);
 }
 
-.inner {
+.tobe__inner {
   position: absolute;
   box-sizing: border-box;
   width: 100%;
@@ -937,21 +1016,21 @@ button, button:focus, button:hover, button:active {
   border-radius: 50%;  
 }
 
-.inner.one {
+.tobe__one {
   left: 0%;
   top: 0%;
   animation: rotate-one 1s linear infinite;
   border-bottom: 3px solid #764BA2;
 }
 
-.inner.two {
+.tobe__two {
   right: 0%;
   top: 0%;
   animation: rotate-two 1s linear infinite;
   border-right: 3px solid #764BA2;
 }
 
-.inner.three {
+.tobe__three {
   right: 0%;
   bottom: 0%;
   animation: rotate-three 1s linear infinite;

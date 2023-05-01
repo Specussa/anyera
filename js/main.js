@@ -212,3 +212,29 @@ prevSlide.addEventListener("click", function () {
 });
 
  // end slider
+
+ // start sp
+
+ const button__level = document.querySelector(".section__hero_sp_gradient");
+ const arrow = document.querySelector(".section__hero_sp_arrow");
+
+ document.querySelector(".button__level_one").addEventListener("click", function(e) {
+  arrow.style.transform = `translate(-50%, -50%) rotate(6deg)`;
+  button__level.classList.add("gradient_one");
+  button__level.classList.remove("gradient_two");
+  button__level.classList.remove("gradient_three");
+});
+document.querySelector(".button__level_two").addEventListener("click", function(e) {
+  arrow.style.transform = `translate(-50%, -50%) rotate(127deg)`;
+  button__level.classList.add("gradient_two");
+  button__level.classList.remove("gradient_one");
+  button__level.classList.remove("gradient_three");
+});
+document.querySelector(".button__level_three").addEventListener("click", function(e) {
+  arrow.style.transform = `translate(-50%, -50%) rotate(247deg)`;
+  button__level.classList.add("gradient_three");
+  button__level.classList.remove("gradient_one");
+  button__level.classList.remove("gradient_two");
+});
+
+ // end sp
