@@ -76,6 +76,10 @@ button, button:focus, button:hover, button:active {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 3;
   font-family: 'Montserrat', sans-serif;
@@ -229,17 +233,17 @@ button, button:focus, button:hover, button:active {
   transition: background-color 0.3s linear;
 }
 
-.section__hero_sp_button:hover.button__level_one {
+.section__hero_sp_button:hover.button__level_one, .button__level_one.active {
   background-color: #7A0BC0;
   border: 1px solid #fff;
 }
 
-.section__hero_sp_button:hover.button__level_two {
+.section__hero_sp_button:hover.button__level_two, .button__level_two.active {
   background-color: #0B8AC0;
   border: 1px solid #fff;
 }
 
-.section__hero_sp_button:hover.button__level_three {
+.section__hero_sp_button:hover.button__level_three, .button__level_three.active {
   background-color: #E105E5;
   border: 1px solid #fff;
 }
@@ -655,6 +659,10 @@ button, button:focus, button:hover, button:active {
 .section__hero_slide {
   display: flex;
   width: 100%;
+  -webkit-transition: -webkit-transform 0.7s;
+  -moz-transition: -moz-transform 0.75s;
+  -ms-transition: -ms-transform 0.7s;
+  -o-transition: -o-transform 0.7s;
   transition: transform 0.7s;
   position: absolute;
   top: 50%;
@@ -703,10 +711,14 @@ button, button:focus, button:hover, button:active {
   height: 222px;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -20px;
   right: 0;
   background: url('../img/top.svg') repeat no-repeat;
   background-position: 0px 0px;
+  -webkit-transition: left 0.7s;
+  -moz-transition: left 0.7s;
+  -ms-transition: left 0.7s;
+  -o-transition: left 0.7s;
   transition: left 0.7s;
   z-index: 1;
 }
@@ -720,6 +732,10 @@ button, button:focus, button:hover, button:active {
   bottom: -64px;
   background: url('../img/bottom.svg') repeat no-repeat;
   background-position: 0px 0px;
+  -webkit-transition: left 0.7s;
+  -moz-transition: left 0.7s;
+  -ms-transition: left 0.7s;
+  -o-transition: left 0.7s;
   transition: left 0.7s;
   z-index: 1;
 }
@@ -752,6 +768,10 @@ button, button:focus, button:hover, button:active {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 460px;
   height: 466px;
@@ -763,6 +783,10 @@ button, button:focus, button:hover, button:active {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   height: 344.7px;
   width: 344.7px;
@@ -774,6 +798,10 @@ button, button:focus, button:hover, button:active {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -862,6 +890,10 @@ button, button:focus, button:hover, button:active {
 }
 
 .gradient_one svg path, .gradient_two svg path, .gradient_three svg path {
+  -webkit-transition: fill 1s;
+  -moz-transition: fill 1s;
+  -ms-transition: fill 1s;
+  -o-transition: fill 1s;
   transition: fill 1s;
 }
 
@@ -869,11 +901,19 @@ button, button:focus, button:hover, button:active {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(6deg);
   height: 371px;
   width: 371px;
   background: url('../img/sp/sparrow.svg') no-repeat;
   background-size: 371px;
+  -webkit-transform: translate(-50%, -50%) rotate(6deg);
+  -moz-transform: translate(-50%, -50%) rotate(6deg);
+  -ms-transform: translate(-50%, -50%) rotate(6deg);
+  -o-transform: translate(-50%, -50%) rotate(6deg);
+  transform: translate(-50%, -50%) rotate(6deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  -ms-transition: -ms-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
   transition: transform 0.5s;
 }
 
@@ -881,6 +921,10 @@ button, button:focus, button:hover, button:active {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -909,11 +953,26 @@ button, button:focus, button:hover, button:active {
 
 .section__hero_carusel_item {
   position: absolute;
-  transition: transform 0.5s;
-  transform: 
-    translateX(calc(var(--cos) * var(--radius-x)))
+  -webkit-transform: translateX(calc(var(--cos) * var(--radius-x)))
     translateY(calc(var(--sin) * var(--radius-y)))
     scale(calc(var(--scale) * 1));
+  -moz-transform: translateX(calc(var(--cos) * var(--radius-x)))
+    translateY(calc(var(--sin) * var(--radius-y)))
+    scale(calc(var(--scale) * 1));
+  -ms-transform: translateX(calc(var(--cos) * var(--radius-x)))
+    translateY(calc(var(--sin) * var(--radius-y)))
+    scale(calc(var(--scale) * 1));
+  -o-transform: translateX(calc(var(--cos) * var(--radius-x)))
+    translateY(calc(var(--sin) * var(--radius-y)))
+    scale(calc(var(--scale) * 1));
+  transform: translateX(calc(var(--cos) * var(--radius-x)))
+    translateY(calc(var(--sin) * var(--radius-y)))
+    scale(calc(var(--scale) * 1));
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  -ms-transition: -ms-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+  transition: transform 0.5s;
 }
 
 .section__hero_carusel_item img {
@@ -1005,6 +1064,10 @@ button, button:focus, button:hover, button:active {
   height: 64px;
   border-radius: 50%;
   perspective: 800px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -1039,27 +1102,51 @@ button, button:focus, button:hover, button:active {
 
 @keyframes rotate-one {
   0% {
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    -moz-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    -ms-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    -o-transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
     transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
   }
   100% {
+    -webkit-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    -moz-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    -ms-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    -o-transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
     transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
   }
 }
 
 @keyframes rotate-two {
   0% {
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    -moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    -ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    -o-transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
     transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
   }
   100% {
+    -webkit-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    -moz-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    -ms-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    -o-transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
     transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
   }
 }
 
 @keyframes rotate-three {
   0% {
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    -moz-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    -ms-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    -o-transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
     transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
   }
   100% {
+    -webkit-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    -moz-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    -ms-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    -o-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
     transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
 }

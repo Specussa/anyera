@@ -170,16 +170,19 @@ dots.forEach(function(dot) {
 
  // start slider
 
- "use strict";
 const slides = document.querySelectorAll(".section__hero_slide");
 const hero_top = document.querySelector(".section__hero_top");
 const hero_bottom = document.querySelector(".section__hero_bottom");
 const slidewidth = document.querySelector(".section__hero_slider");
+const ltop = getComputedStyle(hero_top);
+const lbottom = getComputedStyle(hero_bottom);
+
+// hero_top.style.left = (parseInt(ltop.left) + 50) + 'px';
 
 slides.forEach((slide, indx) => {
   slide.style.transform = `translateX(${indx * 100}%)` + `translateY(-50%)`;
-  hero_top.style.left = `0%`;
-  hero_bottom.style.left = `0%`;
+  hero_top.style.left = ltop.left;
+  hero_bottom.style.left = lbottom.left;
 });
 const nextSlide = document.querySelector(".button__go");
 let curSlide = 0;
@@ -193,8 +196,8 @@ nextSlide.addEventListener("click", function () {
   }
   slides.forEach((slide, indx) => {
     slide.style.transform = `translateX(${100 * (indx - curSlide)}%)` + `translateY(-50%)`;
-    hero_top.style.left = "-" + slidewidth.offsetWidth + "px";
-    hero_bottom.style.left = "-" + slidewidth.offsetWidth + "px";
+    hero_top.style.left = (parseInt(ltop.left) - slidewidth.offsetWidth) + "px";
+    hero_bottom.style.left = (parseInt(ltop.left) - slidewidth.offsetWidth) + "px";
   });
 });
 const prevSlide = document.querySelector(".button__back");
@@ -206,8 +209,8 @@ prevSlide.addEventListener("click", function () {
   }
   slides.forEach((slide, indx) => {
     slide.style.transform = `translateX(${100 * (indx - curSlide)}%)` + `translateY(-50%)`;
-    hero_top.style.left = `0%`;
-    hero_bottom.style.left = `0%`;
+    hero_top.style.left = ltop.left;
+    hero_bottom.style.left = lbottom.left;
   });
 });
 
@@ -216,6 +219,9 @@ prevSlide.addEventListener("click", function () {
  // start sp
 
  const button__level = document.querySelector(".section__hero_sp_gradient");
+ const button__one = document.querySelector(".button__level_one");
+ const button__two = document.querySelector(".button__level_two");
+ const button__three = document.querySelector(".button__level_three");
  const arrow = document.querySelector(".section__hero_sp_arrow");
 
  document.querySelector(".button__level_one").addEventListener("click", function(e) {
@@ -223,18 +229,27 @@ prevSlide.addEventListener("click", function () {
   button__level.classList.add("gradient_one");
   button__level.classList.remove("gradient_two");
   button__level.classList.remove("gradient_three");
+  button__one.classList.add("active");
+  button__two.classList.remove("active");
+  button__three.classList.remove("active");
 });
 document.querySelector(".button__level_two").addEventListener("click", function(e) {
   arrow.style.transform = `translate(-50%, -50%) rotate(127deg)`;
   button__level.classList.add("gradient_two");
   button__level.classList.remove("gradient_one");
   button__level.classList.remove("gradient_three");
+  button__two.classList.add("active");
+  button__one.classList.remove("active");
+  button__three.classList.remove("active");
 });
 document.querySelector(".button__level_three").addEventListener("click", function(e) {
   arrow.style.transform = `translate(-50%, -50%) rotate(247deg)`;
   button__level.classList.add("gradient_three");
-  button__level.classList.remove("gradient_one");
   button__level.classList.remove("gradient_two");
+  button__level.classList.remove("gradient_one");
+  button__three.classList.add("active");
+  button__two.classList.remove("active");
+  button__one.classList.remove("active");
 });
 
  // end sp
