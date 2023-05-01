@@ -862,14 +862,14 @@ button, button:focus, button:hover, button:active {
 }
 
 .gradient_one svg path, .gradient_two svg path, .gradient_three svg path {
-  transition: fill 0.7s;
+  transition: fill 1s;
 }
 
 .section__hero_sp_arrow {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(47deg);
+  transform: translate(-50%, -50%) rotate(6deg);
   height: 371px;
   width: 371px;
   background: url('../img/sp/sparrow.svg') no-repeat;
