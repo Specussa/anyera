@@ -63,6 +63,7 @@ button, button:focus, button:hover, button:active {
 .button__go {
   height: 60px;
   width: 300px;
+  flex: 0 0 auto;
   position: relative;
   border-radius: 30px;
   -webkit-transition: box-shadow 0.3s linear, -webkit-transform 0.3s linear;

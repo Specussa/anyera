@@ -162,8 +162,8 @@
  
  var dots = document.querySelectorAll('.slider__list .slider__list__item');
  dots.forEach(function(dot) {
-     // document.querySelector('.slider1').style.width = 'calc(30em *' + dots.length + ')';
-     // document.querySelector('.slider1').style.height = 'calc(10em *' + dots.length + ')';
+     document.querySelector('.slider1').style.width = 'calc(30em *' + dots.length + ')';
+     document.querySelector('.slider1').style.height = 'calc(10em *' + dots.length + ')';
  });
  
  
