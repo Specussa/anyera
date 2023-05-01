@@ -711,7 +711,7 @@ button, button:focus, button:hover, button:active {
   height: 222px;
   position: absolute;
   top: 0;
-  left: -20px;
+  left: 0;
   right: 0;
   background: url('../img/top.svg') repeat no-repeat;
   background-position: 0px 0px;
@@ -727,7 +727,7 @@ button, button:focus, button:hover, button:active {
   display: block;
   height: 270px;
   position: absolute;
-  left: 0;
+  left: -30px;
   right: 0;
   bottom: -64px;
   background: url('../img/bottom.svg') repeat no-repeat;

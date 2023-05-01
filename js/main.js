@@ -209,8 +209,8 @@ prevSlide.addEventListener("click", function () {
   }
   slides.forEach((slide, indx) => {
     slide.style.transform = `translateX(${100 * (indx - curSlide)}%)` + `translateY(-50%)`;
-    hero_top.style.left = ltop.left;
-    hero_bottom.style.left = lbottom.left;
+    hero_top.style.left = (parseInt(ltop.left) + slidewidth.offsetWidth) + "px";
+    hero_bottom.style.left = (parseInt(ltop.left) + slidewidth.offsetWidth) + "px";
   });
 });
 
