@@ -170,19 +170,45 @@ dots.forEach(function(dot) {
 
  // start slider
 
- const slidesContainer = document.querySelector(".section__hero_slider");
- const slide = document.querySelector(".section__hero_slide");
- const prevButton = document.querySelector(".button__back");
- const nextButton = document.querySelector(".button__go");
- 
- nextButton.addEventListener("click", () => {
-   const slideWidth = slide.clientWidth;
-   slidesContainer.scrollLeft += slideWidth;
- });
- 
- prevButton.addEventListener("click", () => {
-   const slideWidth = slide.clientWidth;
-   slidesContainer.scrollLeft -= slideWidth;
- });
+ "use strict";
+const slides = document.querySelectorAll(".section__hero_slide");
+const hero_top = document.querySelector(".section__hero_top");
+const hero_bottom = document.querySelector(".section__hero_bottom");
+const slidewidth = document.querySelector(".section__hero_slider");
+
+slides.forEach((slide, indx) => {
+  slide.style.transform = `translateX(${indx * 100}%)` + `translateY(-50%)`;
+  hero_top.style.left = `0%`;
+  hero_bottom.style.left = `0%`;
+});
+const nextSlide = document.querySelector(".button__go");
+let curSlide = 0;
+let maxSlide = slides.length - 1;
+
+nextSlide.addEventListener("click", function () {
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)` + `translateY(-50%)`;
+    hero_top.style.left = "-" + slidewidth.offsetWidth + "px";
+    hero_bottom.style.left = "-" + slidewidth.offsetWidth + "px";
+  });
+});
+const prevSlide = document.querySelector(".button__back");
+prevSlide.addEventListener("click", function () {
+  if (curSlide === 0) {
+    curSlide = maxSlide;
+  } else {
+    curSlide--;
+  }
+  slides.forEach((slide, indx) => {
+    slide.style.transform = `translateX(${100 * (indx - curSlide)}%)` + `translateY(-50%)`;
+    hero_top.style.left = `0%`;
+    hero_bottom.style.left = `0%`;
+  });
+});
 
  // end slider
