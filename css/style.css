@@ -1416,10 +1416,20 @@ button, button:focus, button:hover, button:active {
     padding: 3.39px 20.37px 3.39px 10.37px;
     left: 69.62px;
   }
+  .section__hero_sp_button, .section__hero_sp_button:focus{
+    height: 38px;
+    width: 95.45px;
+    padding: 5.61px 10px 5.61px 10px;
+  }
 
   .tobe__head {
     display: flex;
     flex-direction: column;
     font-size: 22px;
+  }
+}
+@media (max-width: 580px) {
+  .section__hero_container, .section__hero_slider, .section__hero_slide {
+    height: 1100px;
   }
 }
