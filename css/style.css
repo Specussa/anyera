@@ -678,6 +678,140 @@ button, button:focus, button:hover, button:active {
   top: 50%;
 }
 
+.section__hero_slide:first-child {
+  transform: translateX(0%) translateY(-50%);
+}
+
+.section__hero_slide:last-child {
+  transform: translateX(100%) translateY(-50%);
+}
+
+.section__hero_slide:first-child .section__hero_right {
+  -webkit-transition: -webkit-transform 0.7s;
+  -moz-transition: -moz-transform 0.75s;
+  -ms-transition: -ms-transform 0.7s;
+  -o-transition: -o-transform 0.7s;
+  transition: transform 0.7s;
+  -webkit-transform: translateY(70px);
+  -moz-transform: translateY(70px);
+  -ms-transform: translateY(70px);
+  -o-transform: translateY(70px);
+  transform: translateY(70px);
+}
+
+.section__hero_slide:first-child.active .section__hero_right {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.section__hero_slide:last-child .section__hero_right {
+  -webkit-transition: -webkit-transform 0.7s;
+  -moz-transition: -moz-transform 0.75s;
+  -ms-transition: -ms-transform 0.7s;
+  -o-transition: -o-transform 0.7s;
+  transition: transform 0.7s;
+  -webkit-transform: translateY(70px);
+  -moz-transform: translateY(70px);
+  -ms-transform: translateY(70px);
+  -o-transform: translateY(70px);
+  transform: translateY(70px);
+}
+
+.section__hero_slide:last-child.active .section__hero_right {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.section__hero_slide:first-child .section__hero_left_head {
+  -webkit-transition: -webkit-transform 0.7s;
+  -moz-transition: -moz-transform 0.75s;
+  -ms-transition: -ms-transform 0.7s;
+  -o-transition: -o-transform 0.7s;
+  transition: transform 0.7s;
+  -webkit-transform: translateY(70px);
+  -moz-transform: translateY(70px);
+  -ms-transform: translateY(70px);
+  -o-transform: translateY(70px);
+  transform: translateY(70px);
+}
+
+.section__hero_slide:first-child .section__hero_left_desc {
+  -webkit-transition: -webkit-transform 0.7s;
+  -moz-transition: -moz-transform 0.75s;
+  -ms-transition: -ms-transform 0.7s;
+  -o-transition: -o-transform 0.7s;
+  transition: transform 0.7s;
+  -webkit-transform: translateY(-70px);
+  -moz-transform: translateY(-70px);
+  -ms-transform: translateY(-70px);
+  -o-transform: translateY(-70px);
+  transform: translateY(-70px);
+}
+
+.section__hero_slide:first-child.active .section__hero_left_head {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.section__hero_slide:first-child.active .section__hero_left_desc {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.section__hero_slide:last-child .section__hero_left_head {
+  -webkit-transition: -webkit-transform 0.7s;
+  -moz-transition: -moz-transform 0.75s;
+  -ms-transition: -ms-transform 0.7s;
+  -o-transition: -o-transform 0.7s;
+  transition: transform 0.7s;
+  -webkit-transform: translateY(70px);
+  -moz-transform: translateY(70px);
+  -ms-transform: translateY(70px);
+  -o-transform: translateY(70px);
+  transform: translateY(70px);
+}
+
+.section__hero_slide:last-child .section__hero_left_desc {
+  -webkit-transition: -webkit-transform 0.7s;
+  -moz-transition: -moz-transform 0.75s;
+  -ms-transition: -ms-transform 0.7s;
+  -o-transition: -o-transform 0.7s;
+  transition: transform 0.7s;
+  -webkit-transform: translateY(-70px);
+  -moz-transform: translateY(-70px);
+  -ms-transform: translateY(-70px);
+  -o-transform: translateY(-70px);
+  transform: translateY(-70px);
+}
+
+.section__hero_slide:last-child.active .section__hero_left_head {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.section__hero_slide:last-child.active .section__hero_left_desc {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
 .section__hero_slide:nth-child(2) .section__hero_left {
   gap: 34px;
 }
@@ -1009,17 +1143,17 @@ button, button:focus, button:hover, button:active {
   height: auto;
 }
 
-.section__hero_carusel_item:nth-child(1), .section__hero_carusel_item:nth-child(1) img {
+.section__hero_carusel_item:nth-child(1n), .section__hero_carusel_item:nth-child(1n) img {
   width: 384px;
   height: 384px;
 }
 
-.section__hero_carusel_item:nth-child(2), .section__hero_carusel_item:nth-child(2) img {
+.section__hero_carusel_item:nth-child(2n), .section__hero_carusel_item:nth-child(2n) img {
   width: 540px;
   height: 406px;
 }
 
-.section__hero_carusel_item:nth-child(3), .section__hero_carusel_item:nth-child(3) img {
+.section__hero_carusel_item:nth-child(3n), .section__hero_carusel_item:nth-child(3n) img {
   width: 410px;
   height: 376px;
 }
@@ -1244,15 +1378,15 @@ button, button:focus, button:hover, button:active {
     z-index: 1;
     gap: 20px;
   }
-  .section__hero_carusel_item:nth-child(1), .section__hero_carusel_item:nth-child(1) img {
+  .section__hero_carusel_item:nth-child(1n), .section__hero_carusel_item:nth-child(1n) img {
     width: 245.92px;
     height: 245.92px;
   }
-  .section__hero_carusel_item:nth-child(2), .section__hero_carusel_item:nth-child(2) img {
+  .section__hero_carusel_item:nth-child(2n), .section__hero_carusel_item:nth-child(2n) img {
     width: 310px;
     height: 238px;
   }
-  .section__hero_carusel_item:nth-child(3), .section__hero_carusel_item:nth-child(3) img {
+  .section__hero_carusel_item:nth-child(3n), .section__hero_carusel_item:nth-child(3n) img {
     width: 262px;
     height: 241px;
   }
@@ -1348,7 +1482,6 @@ button, button:focus, button:hover, button:active {
   .section__hero_sp_back {
     width: 320.39px;
     height: 324.39px;
-    background: url(../img/sp/spback.svg) no-repeat;
     background-size: 320.39px;
   }
   .section__hero_container {
@@ -1360,6 +1493,25 @@ button, button:focus, button:hover, button:active {
   }
   .section__hero_left_go, .section__hero_left_back {
     display: none;
+  }
+  .section__hero_slide:first-child .section__hero_right_go {
+    -webkit-transition: -webkit-transform 0.7s;
+    -moz-transition: -moz-transform 0.75s;
+    -ms-transition: -ms-transform 0.7s;
+    -o-transition: -o-transform 0.7s;
+    transition: transform 0.7s;
+    -webkit-transform: translateY(-40px);
+    -moz-transform: translateY(-40px);
+    -ms-transform: translateY(-40px);
+    -o-transform: translateY(-40px);
+    transform: translateY(-40px);
+  }
+  .section__hero_slide:first-child.active .section__hero_right_go {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
   }
   .section__hero_right_go {
     display: block;
@@ -1387,20 +1539,24 @@ button, button:focus, button:hover, button:active {
     gap: 22px;
     flex-direction: column;
   }
+  .section__hero_slide:last-child .section__hero_left_head {
+    font-size: 20px;
+    line-height: 24px;
+  }
   .section__hero_carusel_list {
     width: 279.5px;
     height: 295.89px;
     background-size: 279.5px 295.89px;
   }
-  .section__hero_carusel_item:nth-child(1), .section__hero_carusel_item:nth-child(1) img {
+  .section__hero_carusel_item:nth-child(1n), .section__hero_carusel_item:nth-child(1n) img {
     width: 234px;
     height: 215px;
   }
-  .section__hero_carusel_item:nth-child(2), .section__hero_carusel_item:nth-child(2) img {
+  .section__hero_carusel_item:nth-child(2n), .section__hero_carusel_item:nth-child(2n) img {
     width: 268px;
     height: 206px;
   }
-  .section__hero_carusel_item:nth-child(3), .section__hero_carusel_item:nth-child(3) img {
+  .section__hero_carusel_item:nth-child(3n), .section__hero_carusel_item:nth-child(3n) img {
     width: 236px;
     height: 217px;
   }

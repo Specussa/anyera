@@ -142,7 +142,7 @@
        const cos = Math.cos(pos)
        const sin = Math.sin(pos)
        const scale = Math.max(0.3, (sin + 1) / 2)
-       item.style.setProperty('--cos', (cos + 0.05))
+       item.style.setProperty('--cos', (cos + 0.025))
        item.style.setProperty('--sin', (sin - 0.9))
        item.style.setProperty('--scale', scale)
      })
@@ -159,26 +159,27 @@
  }
  
  const carusel = new Carusel(document.querySelector('.section__hero_carusel'))
+ const carusel_list = document.querySelector(".section__hero_carusel_list");
+ const carusell = getComputedStyle(carusel_list);
  
- var dots = document.querySelectorAll('.slider__list .slider__list__item');
+ var dots = document.querySelectorAll('.section__hero_carusel_list .section__hero_carusel_item');
  dots.forEach(function(dot) {
-     document.querySelector('.slider1').style.width = 'calc(30em *' + dots.length + ')';
-     document.querySelector('.slider1').style.height = 'calc(10em *' + dots.length + ')';
+     document.querySelector('.section__hero_carusel').style.setProperty('--radius-x', (parseInt(carusell.width) * 2) + 'px');
+    //  document.querySelector('.section__hero_carusel').style.setProperty('--radius-y', (parseInt(carusell.height) * 2) + 'px');
  });
- 
  
   // end carusel
  
   // start slider
  
  const slides = document.querySelectorAll(".section__hero_slide");
+ const slideone = document.querySelector(".slide_one");
+ const slidetwo = document.querySelector(".slide_two");
  const hero_top = document.querySelector(".section__hero_top");
  const hero_bottom = document.querySelector(".section__hero_bottom");
  const slidewidth = document.querySelector(".section__hero_slider");
  const ltop = getComputedStyle(hero_top);
  const lbottom = getComputedStyle(hero_bottom);
- 
- // hero_top.style.left = (parseInt(ltop.left) + 50) + 'px';
  
  slides.forEach((slide, indx) => {
    slide.style.transform = `translateX(${indx * 100}%)` + `translateY(-50%)`;
@@ -201,6 +202,8 @@
      hero_top.style.left = (parseInt(ltop.left) - slidewidth.offsetWidth) + "px";
      hero_bottom.style.left = (parseInt(lbottom.left) - slidewidth.offsetWidth) + "px";
    });
+   slidetwo.classList.add("active");
+   slideone.classList.remove("active");
  });
  nextSlide2.addEventListener("click", function () {
    if (curSlide === maxSlide) {
@@ -213,6 +216,8 @@
      hero_top.style.left = (parseInt(ltop.left) - slidewidth.offsetWidth) + "px";
      hero_bottom.style.left = (parseInt(lbottom.left) - slidewidth.offsetWidth) + "px";
    });
+   slidetwo.classList.add("active");
+   slideone.classList.remove("active");
  });
  const prevSlide = document.querySelector(".button__back");
  const prevSlide2 = document.querySelector(".section__hero_right_back");
@@ -227,6 +232,8 @@
      hero_top.style.left = (parseInt(ltop.left) + slidewidth.offsetWidth) + "px";
      hero_bottom.style.left = (parseInt(lbottom.left) + slidewidth.offsetWidth) + "px";
    });
+   slideone.classList.add("active");
+   slidetwo.classList.remove("active");
  });
  prevSlide2.addEventListener("click", function () {
    if (curSlide === 0) {
@@ -239,6 +246,8 @@
      hero_top.style.left = (parseInt(ltop.left) + slidewidth.offsetWidth) + "px";
      hero_bottom.style.left = (parseInt(lbottom.left) + slidewidth.offsetWidth) + "px";
    });
+   slideone.classList.add("active");
+   slidetwo.classList.remove("active");
  });
  
 
